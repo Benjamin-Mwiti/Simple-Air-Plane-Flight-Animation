@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    position: absolute;
+    display: grid;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(#87CEFA, #bbc1c4);
+    overflow: hidden;
+}
+
+.clouds {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 60vh;
+}
+
+.clouds * {
+    position: absolute;
+    right: -65%;
+}
+
+.cloud1 {
+    width: 60vw;
+    height: 60vh;
+    z-index: 4;
+
+    animation: animated__cloud 48s linear 10s infinite forwards;
+}
+
+.cloud2 {
+    width: 50vw;
+    z-index: 6;
+
+    animation: animated__cloud 45s linear 5s infinite forwards;
+}
+
+.cloud3 {
+    width: 60vw;
+    height: 60vh;
+    z-index: 4;
+
+    animation: animated__cloud 43s linear 10s infinite forwards;
+}
+
+.cloud4 {
+    width: 60vw;
+    height: 60vh;
+    z-index: 6;
+
+    animation: animated__cloud 60s linear 8s infinite forwards;
+}
+
+.cloud5 {
+    width: 50vw;
+    z-index: 6;
+
+    animation: animated__cloud 54s linear infinite forwards;
+}
+
+.cloud6 {
+    width: 60vw;
+    height: 60vh;
+    z-index: 6;
+
+    animation: animated__cloud 65s linear 13s infinite forwards;
+}
+
+@keyframes animated__cloud {
+    50% {
+        right: 100%;
+        transform: scale(.6);
+    }
+}
+
+.airplane {
+    position: relative;
+    margin: 3%;
+    width: 35vw;
+    transform: translate3d(65%, -21px, 0) rotateZ(0);
+    z-index: 2;
+
+    animation: animated__airplane 20s linear infinite forwards;
+}
+
+@keyframes animated__airplane {
+    0% {
+        transform: translate3d(65%, -21px, 0) rotateZ(0);
+    }
+    10% {
+        transform: translate3d(65%, -21px, 0) rotateZ(0);
+    }
+    20% {
+        transform: translate3d(65%, 0, 0) rotateZ(4deg);
+    }
+    30% {
+        transform: translate3d(65%, 42px, 0) rotateZ(8deg);
+    }
+    40% {
+        transform: translate3d(65%, 84px, 0) rotateZ(0);
+    }
+    50% {
+        transform: translate3d(65%, 84px, 0) rotateZ(0);
+    }
+    60% {
+        transform: translate3d(65%, 84px, 0) rotateZ(0);
+    }
+    70% {
+        transform: translate3d(65%, 42px, 0) rotateZ(-8deg);
+    }
+    80% {
+        transform: translate3d(65%, 0, 0) rotateZ(-4deg);
+    }
+    90% {
+        transform: translate3d(65%, -21px, 0) rotateZ(0);
+    }
+    100% {
+        transform: translate3d(65%, -21px, 0) rotateZ(0);
+    }
+}
+
+.city {
+    position: absolute;
+    height: 50vh;
+    width: 500%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('City.png');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    z-index: 4;
+    
+    animation: animated__city 25s linear infinite forwards;
+}
+
+@keyframes animated__city {
+    100% {
+        transform: translateX(-5000px);
+    }
+}
+
